@@ -21,10 +21,10 @@ class Deck:
 
     def deal_hand(self):
 
-        """This model assumes a four player game of Squence"""
-        """If there are more or less players, change hand size accordingly"""
+        """This model assumes a tw0 player game of Squence"""
+        """If there are more or less players, reduce hand size accordingly"""
         
-        hand_size = 6
+        hand_size = 7
         hand = []
 
         for i in range(hand_size):
