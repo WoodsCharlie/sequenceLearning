@@ -14,4 +14,20 @@ class Deck:
 
         self.deckofcards = deck_list
     
-    
+
+    def draw_card(self):
+        return self.deckofcards.pop(0)
+
+
+    def deal_hand(self):
+
+        """This model assumes a four player game of Squence"""
+        """If there are more or less players, change hand size accordingly"""
+        
+        hand_size = 6
+        hand = []
+
+        for i in range(hand_size):
+            hand.append(self.deckofcards.pop(0))
+
+        return hand
