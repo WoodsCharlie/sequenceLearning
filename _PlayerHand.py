@@ -21,8 +21,8 @@ class PlayerHand():
         return (card in self.hand)
 
     
-    def valid_play(self, card):
-        #TODO
+    def valid_play(self, card, gameBoard):
+        #Note: this does not actually make a move, just checks if a move CAN be made
         """Add implementation"""
 
         #card is an int between 0 and 51 (inclusive) that represents the deck
@@ -37,9 +37,12 @@ class PlayerHand():
         
         """If card is a one eyed jack, """
         if (card == 10 or card == 23):
-            #MUST check if the other player has a card down
-            #for now, just return true
-            return True
-
-        #down here, check to see if it is actually valid
+            #check if the other player has a card down
+            for x in gameBoard.cardsPlayed.size:
+                if gameBoard.cardsPlayed[x] > 0:
+                    return True
+            return False #This should only run if there have been no cards played
+        
+        #down here, check to see if the non jack move is actually valid
+        
         return False
