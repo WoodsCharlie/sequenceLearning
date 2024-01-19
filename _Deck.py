@@ -21,7 +21,7 @@ class Deck:
 
     def deal_hand(self):
 
-        """This model assumes a tw0 player game of Squence"""
+        """This model assumes a two player game of Squence"""
         """If there are more or less players, reduce hand size accordingly"""
         
         hand_size = 7
